@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Playground": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\Skeleton.Playground\\Skeleton.Playground.csproj"
+    },
+    "Tests": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\Tests\\Skeleton.Playground.Tests\\Skeleton.Playground.Tests.csproj"
+    }
+  }
+}

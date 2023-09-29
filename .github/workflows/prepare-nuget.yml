@@ -1,0 +1,44 @@
+name: Prepare
+
+# doc: https://docs.github.com/en/actions
+# variables: https://docs.github.com/en/actions/learn-github-actions/environment-variables
+# secrets: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#example-17
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: false
+        default: 'warning'
+    
+jobs:
+  version_increment:
+    name: Increment Version
+    runs-on: ubuntu-latest    
+    
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:      
+      - uses: actions/checkout@v3
+
+      - name: Increment Version
+        run: |
+          perl -pi -e 's#<PackageVersion>([0-9]+)\.([0-9]+)\.([0-9]+)(.*)</PackageVersion>#"<PackageVersion>$1.$2.${\( $3+1 )}$4</PackageVersion>"#eg' Bnaya.SourceGenerator.Template.csproj
+        shell: bash
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_user_name: CI/CD
+          commit_user_email: ci@source-generation.com
+          commit_message: "Increment Version"
+          commit_options: '--no-verify'
+          push_options: '--no-verify'

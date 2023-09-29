@@ -1,0 +1,74 @@
+name: Build & Deploy NuGet
+
+# doc: https://docs.github.com/en/actions
+# variables: https://docs.github.com/en/actions/learn-github-actions/environment-variables
+# secrets: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#example-17
+
+on:
+  workflow_run:
+    workflows: ["Prepare"]
+    types:
+      - completed
+
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: false
+        default: 'warning'
+    
+jobs:
+  build-publish_nuget:
+    name: Build & Publish NuGet (public)
+    runs-on: ubuntu-latest    
+
+    steps:
+      - id: throw-on-failure  
+        # if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        uses: bnayae/open-workflows/.github/actions/throw-on-failure@main    
+
+      - uses: actions/checkout@v3
+   
+      - name: Build Setup (.NET)
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+          include-prerelease: false
+  
+      - name: Pack
+        run: dotnet pack -c Release --force -o . 
+        shell: bash
+
+      - name: Install
+        run: |
+          dotnet new install .
+        shell: bash
+
+      - name: cli
+        run: |
+          cd $Home 
+          dotnet new srcgen -n Comp.MyGenerator
+        shell: bash
+
+      - name: test
+        run: |
+          cd $Home 
+          cd ./Comp.MyGenerator
+          dotnet test --filter test-type=unit
+        shell: bash
+
+      - name: cleanup
+        run: |
+          cd $Home 
+          rm -rf Comp.MyGenerator
+        shell: bash
+
+      - name: Uninstall
+        run: |
+          dotnet new uninstall .
+        shell: bash
+
+      - name: Push 
+        run: dotnet nuget push Bnaya.SourceGenerator.Template.*.nupkg -k ${{ secrets.NUGET_PUBLISH }} -s https://api.nuget.org/v3/index.json --skip-duplicate 
+  
+ 

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Bnaya Eshet",
+  "classifications": ["Source Generator", "Template", "C#", "CSharp", "Tool"],
+  "name": "Source Generator template",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "A project template for creating a fully configured Source Code Generator.",
+  "groupIdentity": "Bnaya.SourceGenerator.Template",
+  "precedence": "9800",
+  "identity": "Bnaya.SourceGenerator.Template.CSharp.8.0",
+  "shortName": "srcgen",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "keyword": "source-generator"
+  },
+  "sourceName": "Skeleton",
+  "preferNameDirectory": true,
+  "guids": [
+
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": ["./**/.vs/**", "./**/template_config/**"]
+        },
+      ]
+    }
+  ],
+  "symbols": {
+  },
+  "primaryOutputs": [{ "path": "Skeleton.sln" }],
+  "defaultName": "SourceCodeGenerator",
+  "postActions": [
+    {
+      "id": "restore",
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
