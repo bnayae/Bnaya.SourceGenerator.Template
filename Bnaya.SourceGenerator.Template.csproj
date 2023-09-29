@@ -5,14 +5,14 @@
     <PackageVersion>1.0.0.0</PackageVersion>
     <PackageId>Bnaya.SourceGenerator.Template</PackageId>
     <Title>Event Sourcing Backbone</Title>
-    <Authors>Me</Authors>
-    <Copyright>Bnaya Eshet</Copyright>
+    <Authors>Bnaya Eshet</Authors>
+    <Copyright>Bnaya Eshet ©</Copyright>
     <PackageCopyright>Bnaya Eshet</PackageCopyright>
-    <Description>Create Event Sourcing starter solution.</Description>
-    <PackageTags>Bnaya;Event-Sourcing;Redis;Kafka;S3</PackageTags>
+    <Description>Create Source Code Generation starter solution.</Description>
+    <PackageTags>Bnaya;Source;Generation;dotnet;c#;Tools;Analyzer</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/bnayae/Event-Sourcing-Backbone-Template</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/bnayae/Event-Sourcing-Backbone</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/bnayae/Bnaya.SourceGenerator.Template</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bnayae/Bnaya.SourceGenerator.Template</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
 
