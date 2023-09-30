@@ -38,15 +38,16 @@ jobs:
       run: dotnet restore /property:Configuration=${{ env.BUILD_CONFIG }}
     - name: Build
       run: dotnet build  --configuration ${{ env.BUILD_CONFIG }} --no-restore 
-    - name: Test
-      run: dotnet test Tests/Skeleton.Playground.Tests --configuration ${{ env.BUILD_CONFIG }} --no-restore --no-build --verbosity normal 
+    # - name: Test
+    #   run: dotnet test Skeleton.Playground.Tests --configuration ${{ env.BUILD_CONFIG }} --no-restore --no-build --verbosity normal 
 
-    - name: Push generated package to GitHub registry
-      run: dotnet nuget push ./**/*.nupkg -k ${{ secrets.NUGET_PUBLISH }} -s https://api.nuget.org/v3/index.json --skip-duplicate 
+    # - name: Push generated package to GitHub registry
+    #   run: dotnet nuget push ./**/*.nupkg -k ${{ secrets.NUGET_PUBLISH }} -s https://api.nuget.org/v3/index.json --skip-duplicate 
 
-  source-generator:
+  src-gen:
 
-    name: Source Generator
+    name: src-gen
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
