@@ -4,7 +4,7 @@ using Skeleton;
 
 namespace Skeleton.Playground;
 
-[Omit]
+[Partial]
 public readonly partial record struct RecStruct1(int Value, string Name)
 {
     public required int Quantity { get; init; }

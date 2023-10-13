@@ -1,12 +1,12 @@
 ﻿namespace Skeleton;
 
 /// <summary>
-/// Code generation Omit functionality, mimik the TypeScript feature: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
+/// Code generation Partial functionality, mimik the TypeScript feature: https://www.typescriptlang.org/docs/handbook/utility-types.html#Partialtype-keys
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false)]
-public class OmitAttribute : Attribute
+public class PartialAttribute : Attribute
 {
-    public OmitAttribute(params string[] properties)
+    public PartialAttribute(params string[] properties)
     {
         Properties = properties;
     }

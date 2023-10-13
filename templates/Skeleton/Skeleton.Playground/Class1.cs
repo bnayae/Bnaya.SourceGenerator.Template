@@ -2,7 +2,7 @@
 
 namespace Skeleton.Playground;
 
-[Omit]
+[Partial]
 public partial class Class1
 {
     public Class1(int value, string name)

@@ -2,5 +2,5 @@
 
 
 namespace Skeleton.Playground;
-[Omit]
+[Partial]
 public partial record Rec1(int Value, string Name);

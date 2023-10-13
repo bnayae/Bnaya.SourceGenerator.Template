@@ -2,7 +2,7 @@
 
 namespace Skeleton.Playground;
 
-[Omit]
+[Partial]
 public partial struct Struct1
 {
     public Struct1(int value, string name)
