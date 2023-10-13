@@ -4,7 +4,7 @@
 		<Description>Code generator for Skeleton</Description>
 		<Configurations>Debug;Release;Gen</Configurations>
 		<IsRoslynComponent>true</IsRoslynComponent>
-		<AssemblyName>BuilderPatternGenerator.Abstractions</AssemblyName>
+		<AssemblyName>Skeleton.Abstractions</AssemblyName>
 		<Title>Builder Pattern Abstractions </Title>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
 		<!--<IncludeBuildOutput>false</IncludeBuildOutput>-->

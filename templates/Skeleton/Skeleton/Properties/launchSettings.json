@@ -6,7 +6,7 @@
     },
     "Tests": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\..\\Tests\\Skeleton.Playground.Tests\\Skeleton.Playground.Tests.csproj"
+      "targetProject": "..\\Skeleton.Playground.Tests\\Skeleton.Playground.Tests.csproj"
     }
   }
 }

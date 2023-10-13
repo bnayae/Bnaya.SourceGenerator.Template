@@ -24,7 +24,7 @@
 		<IncludeSymbols>False</IncludeSymbols>
 		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
-		<AssemblyName>BuilderPatternGenerator</AssemblyName>
+		<AssemblyName>Skeleton.Generators</AssemblyName>
 		<Title>Builder Pattern Generator</Title>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
 	</PropertyGroup>
