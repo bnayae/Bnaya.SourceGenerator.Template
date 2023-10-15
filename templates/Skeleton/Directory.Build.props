@@ -17,7 +17,6 @@
 
 	<PropertyGroup>
 		<PackageTags>dotnet, .net, generator, source-code, compile-time</PackageTags>
-		<PackageProjectUrl>https://medium.com/Bnayae</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/YOUR_GITHUB_NAME/Skeleton</RepositoryUrl>
 		<RepositoryType>GitHub</RepositoryType>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

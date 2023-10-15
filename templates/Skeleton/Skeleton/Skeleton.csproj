@@ -5,7 +5,7 @@
 		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 		<LangVersion>10</LangVersion>
 		<Nullable>enable</Nullable>
-		<Description>Source Generator Sample</Description>
+		<Description>Source Generators</Description>
 		<Configurations>Debug;Release;Gen</Configurations>
 	</PropertyGroup>
 	
@@ -24,7 +24,7 @@
 		<IncludeSymbols>False</IncludeSymbols>
 		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
-		<AssemblyName>Skeleton.Generators</AssemblyName>
+		<AssemblyName>Skeleton</AssemblyName>
 		<Title>Builder Pattern Generator</Title>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
 	</PropertyGroup>
