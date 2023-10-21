@@ -29,12 +29,6 @@
 	  <ProjectReference Include="..\Skeleton.Playground\Skeleton.Playground.csproj" />
 	  <ProjectReference Include="..\Skeleton\Skeleton.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="icon.png">
-			<Pack>True</Pack>
-		</None>
-	</ItemGroup>
 	
 	<ItemGroup>
 		<PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />

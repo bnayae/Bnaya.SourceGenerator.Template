@@ -11,7 +11,6 @@
 		<Nullable>enable</Nullable>
 		<Configurations>Debug;Release;Gen</Configurations>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<PackageIcon>icon.png</PackageIcon>
 		<Copyright>© Your Name or Company</Copyright>
 	</PropertyGroup>
 
@@ -45,10 +44,4 @@
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.111" PrivateAssets="All" />
 	</ItemGroup>
 	
-	<ItemGroup>
-		<None Include="icon.png">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
-	</ItemGroup>
 </Project>
