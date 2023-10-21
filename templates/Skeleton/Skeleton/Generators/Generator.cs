@@ -4,7 +4,7 @@
 using System.Collections.Immutable;
 using System.Text;
 
-using Bnaya.TypePatterns.Generators.BuilderPatternGeneration;
+using Skeleton.BuilderPatternGeneration;
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -98,9 +98,6 @@ public partial class Generator : AttributeGeneratorBase
         GenerationContent GeneratePartialClass()
         {
             StringBuilder builder = new StringBuilder();
-
-            builder.AppendLine($"partial {syntax.Keyword.Text}{additionType} {typeSymbol.Name}");
-            builder.AppendLine("{");
 
             string type = syntax.Keyword.Text;
             builder.AppendLine($"partial {type}{additionType} {typeSymbol.Name}");
