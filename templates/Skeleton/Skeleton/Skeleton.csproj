@@ -25,7 +25,7 @@
 		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
 		<AssemblyName>Skeleton</AssemblyName>
-		<Title>Builder Pattern Generator</Title>
+		<Title>Skeleton</Title>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
 	</PropertyGroup>
 

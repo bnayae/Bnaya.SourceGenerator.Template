@@ -101,6 +101,27 @@ public partial class Generator : AttributeGeneratorBase
 
             builder.AppendLine($"partial {syntax.Keyword.Text}{additionType} {typeSymbol.Name}");
             builder.AppendLine("{");
+
+            string type = syntax.Keyword.Text;
+            builder.AppendLine($"partial {type}{additionType} {typeSymbol.Name}");
+            builder.AppendLine("{");
+
+            if (type == "record")
+            {
+                builder.AppendLine($"\tpublic static {typeSymbol.Name} operator +({typeSymbol.Name} a, {typeSymbol.Name}Nullable b)");
+                builder.AppendLine("\t{");
+                builder.AppendLine("\t\tvar result = a with {");
+                foreach (var member in props)
+                {
+                    string name = member.Name;
+                    builder.AppendLine($"\t\t\t{name} = b.{name} ?? a.{name},");
+                }
+                builder.Remove( builder.Length - 1, 1);
+                builder.AppendLine("\t\t};");
+                builder.AppendLine("\t\treturn result;");
+                builder.AppendLine("\t}");
+            }
+            
             builder.AppendLine("}");
 
             return new GenerationContent($"{typeSymbol.Name}.partial.generated.cs", builder.ToString());
@@ -119,7 +140,9 @@ public partial class Generator : AttributeGeneratorBase
 
             foreach (var member in props)
             {
-                builder.AppendLine($"\tpublic {member.Type}? {member.Name}{{ get; init; }}");
+                bool isNullable = member.Type.NullableAnnotation == NullableAnnotation.Annotated;
+                string nullableChar = isNullable ? string.Empty : "?";
+                builder.AppendLine($"\tpublic {member.Type}{nullableChar} {member.Name}{{ get; init; }}");
             }
 
             builder.AppendLine("}");
