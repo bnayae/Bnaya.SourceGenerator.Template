@@ -119,7 +119,7 @@ public partial class Generator : AttributeGeneratorBase
 
             foreach (var member in props)
             {
-                builder.AppendLine($"\tpublic {member.Type}? {member.Name}{{ get; init }}");
+                builder.AppendLine($"\tpublic {member.Type}? {member.Name}{{ get; init; }}");
             }
 
             builder.AppendLine("}");
