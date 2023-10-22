@@ -5,13 +5,25 @@ VisualStudioVersion = 17.0.31825.309
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Abstractions", "Skeleton.Abstractions\Skeleton.Abstractions.csproj", "{7923F21A-F04A-4D02-AFB2-AF0CF8994A70}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Bnaya.SourceCodeGenerator.Extensions.Shared", "Bnaya.SourceCodeGenerator.Extensions.Shared\Bnaya.SourceCodeGenerator.Extensions.Shared.shproj", "{99732F3C-F02F-4E3D-889B-5710A7FC541B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton", "Skeleton\Skeleton.csproj", "{35348B08-4755-4B4A-B45C-23957843BD04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Playground", "Skeleton.Playground\Skeleton.Playground.csproj", "{F1D5792A-7431-4017-A252-0EE6510D554D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Proxies.Playground", "Skeleton.Proxies.Playground\Skeleton.Proxies.Playground.csproj", "{836406B6-2C06-4F10-BFFB-2944D5CE75D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Playground.Tests", "Skeleton.Playground.Tests\Skeleton.Playground.Tests.csproj", "{B05224D2-816C-4152-B9CE-01582A4AF4ED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CBA8C8C-AA13-442C-9701-8CEFE19B8084}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Web.Playground", "Skeleton.Web.Playground\Skeleton.Web.Playground.csproj", "{3C64C4B0-256C-4AC7-BF22-9666A5100482}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Abstractions.Playground", "Skeleton.Abstractions.Playground\Skeleton.Abstractions.Playground.csproj", "{093B158C-124B-4E4B-AB2E-E6088B9D4B35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{B5CE5BA1-C12F-4B27-9D9C-66A1232A1C0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,27 +44,34 @@ Global
 		{35348B08-4755-4B4A-B45C-23957843BD04}.Gen|Any CPU.Build.0 = Gen|Any CPU
 		{35348B08-4755-4B4A-B45C-23957843BD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35348B08-4755-4B4A-B45C-23957843BD04}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Gen|Any CPU.ActiveCfg = Gen|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Gen|Any CPU.Build.0 = Gen|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1D5792A-7431-4017-A252-0EE6510D554D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Gen|Any CPU.ActiveCfg = Gen|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Gen|Any CPU.Build.0 = Gen|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B05224D2-816C-4152-B9CE-01582A4AF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Gen|Any CPU.ActiveCfg = Gen|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Gen|Any CPU.Build.0 = Gen|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Gen|Any CPU.ActiveCfg = Gen|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Gen|Any CPU.Build.0 = Gen|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Gen|Any CPU.ActiveCfg = Gen|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Gen|Any CPU.Build.0 = Gen|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{836406B6-2C06-4F10-BFFB-2944D5CE75D0} = {B5CE5BA1-C12F-4B27-9D9C-66A1232A1C0A}
+		{3C64C4B0-256C-4AC7-BF22-9666A5100482} = {B5CE5BA1-C12F-4B27-9D9C-66A1232A1C0A}
+		{093B158C-124B-4E4B-AB2E-E6088B9D4B35} = {B5CE5BA1-C12F-4B27-9D9C-66A1232A1C0A}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A27F8F97-8EDA-47D5-8893-F9C857C2D1BC}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Bnaya.SourceCodeGenerator.Extensions.Shared\Bnaya.SourceCodeGenerator.Extensions.Shared.projitems*{35348b08-4755-4b4a-b45c-23957843bd04}*SharedItemsImports = 5
-		Bnaya.SourceCodeGenerator.Extensions.Shared\Bnaya.SourceCodeGenerator.Extensions.Shared.projitems*{99732f3c-f02f-4e3d-889b-5710a7fc541b}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

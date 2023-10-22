@@ -47,7 +47,5 @@
 		<PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
 	</ItemGroup>
 
-	<Import Project="..\Bnaya.SourceCodeGenerator.Extensions.Shared\Bnaya.SourceCodeGenerator.Extensions.Shared.projitems" Label="Shared" />
-
 
 </Project>
