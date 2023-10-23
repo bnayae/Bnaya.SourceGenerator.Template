@@ -34,7 +34,7 @@ public partial class Generator : IIncrementalGenerator
     {
         IncrementalValuesProvider<SyntaxAndSymbol> classDeclarations =
                 context.SyntaxProvider
-        .CreateSyntaxProvider(
+                    .CreateSyntaxProvider(
                         predicate: AttributePredicate,
                         transform: static (ctx, _) => ToGenerationInput(ctx))
                     .Where(static m => m is not null);
